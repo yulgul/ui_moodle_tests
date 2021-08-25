@@ -14,7 +14,7 @@ class TestAuth:
         """
         Steps
         1. Open main page
-        2. Auth with valid data
+        2. Auth with no valid data
         3. Check auth result.
         """
         app.open_main_page()
