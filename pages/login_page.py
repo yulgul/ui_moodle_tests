@@ -1,10 +1,39 @@
+from models.auth import AuthData
 from pages.base_page import BasePage
 from locators.login_page_locators import LoginPageLocators
-
+from selenium.webdriver.remote.webelement import WebElement
 
 class LoginPage(BasePage):
+    def is_auth(self):
+        self.find_element(LoginPageLocators.FORM)
+        element = self.find_elements(LoginPageLocators.USER_BUTTON)
+        if len(element) > 0:
+            return True
+        return False
 
-    def auth(self, login: str, password: str):
-        self.input_login(LoginPageLocators.LOGIN, login)
-        self.input_password(LoginPageLocators.PASSWORD, password)
-        self.click(LoginPageLocators.BUTTON_SUBMIT)
+    def login_input(self) -> WebElement:
+        return self.find_element(LoginPageLocators.LOGIN)
+
+    def password_input(self) -> WebElement:
+        return self.find_element(LoginPageLocators.PASSWORD)
+
+    def submit_button(self) -> WebElement:
+        return self.find_element(LoginPageLocators.BUTTON_SUBMIT)
+
+    def user_menu(self) -> WebElement:
+        return self.find_element(LoginPageLocators.USER_MENU)
+
+    def exit(self) -> WebElement:
+        return self.find_element(LoginPageLocators.EXIT)
+
+    def auth(self, data: AuthData):
+        if self.is_auth():
+            self.click(self.user_menu())
+            self.click(self.exit())
+        self.input(self.login_input(), data.login)
+        self.input(self.password_input(), data.password)
+        self.click(self.submit_button())
+
+
+    def auth_error(self) -> str:
+        return self.find_element(LoginPageLocators.LOGIN_ERROR).text

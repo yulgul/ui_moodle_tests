@@ -19,7 +19,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--base-url",
         action="store",
-        default="https://qacoursemoodle.innopolis.university/login/index.php",
+        default="https://qacoursemoodle.innopolis.university",
         help="enter base_url",
     ),
     parser.addoption(
