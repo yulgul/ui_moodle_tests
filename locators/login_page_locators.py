@@ -9,3 +9,4 @@ class LoginPageLocators:
     USER_MENU = (By.CLASS_NAME, "usermenu")
     EXIT = (By.ID, "actionmenuaction-6")
     LOGIN_ERROR = (By.ID,  "loginerrormessage")
+    EXIT_CONFIRM = (By.XPATH, "//button[text()='Выход']")

@@ -4,9 +4,16 @@ from locators.login_page_locators import LoginPageLocators
 from selenium.webdriver.remote.webelement import WebElement
 
 class LoginPage(BasePage):
+
     def is_auth(self):
         self.find_element(LoginPageLocators.FORM)
         element = self.find_elements(LoginPageLocators.USER_BUTTON)
+        if len(element) > 0:
+            return True
+        return False
+
+    def is_exit_confirm_button(self):
+        element = self.find_elements(LoginPageLocators.EXIT_CONFIRM)
         if len(element) > 0:
             return True
         return False
@@ -26,10 +33,15 @@ class LoginPage(BasePage):
     def exit(self) -> WebElement:
         return self.find_element(LoginPageLocators.EXIT)
 
+    def exit_confirm(self) -> WebElement:
+        return self.find_element(LoginPageLocators.EXIT_CONFIRM)
+
     def auth(self, data: AuthData):
         if self.is_auth():
             self.click(self.user_menu())
             self.click(self.exit())
+        if self.is_exit_confirm_button():
+            self.click(self.exit_confirm())
         self.input(self.login_input(), data.login)
         self.input(self.password_input(), data.password)
         self.click(self.submit_button())
@@ -37,3 +49,5 @@ class LoginPage(BasePage):
 
     def auth_error(self) -> str:
         return self.find_element(LoginPageLocators.LOGIN_ERROR).text
+
+
