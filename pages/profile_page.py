@@ -1,9 +1,13 @@
-from locators.user_page_locators import UserPageLocators
+
+
+from locators.user_page_locators import UserPageLocators, AddImageLocators, MoreInfoLocators, InterestsLocators, \
+    OptionalLocators
 from models.auth import AuthData
-from models.user_data import UserData
+from models.user_data import UserData, UserImage
 from pages.base_page import BasePage
 from locators.login_page_locators import LoginPageLocators
 from selenium.webdriver.remote.webelement import WebElement
+
 
 class ProfilePage(BasePage):
 
@@ -20,26 +24,96 @@ class ProfilePage(BasePage):
         return self.find_element(UserPageLocators.USER_BUTTON)
 
     def submit_setting_button(self):
-        """кнопка Настройки."""
         return self.find_element(UserPageLocators.SETTING_BUTTON)
 
     def submit_edit_button(self):
-        """кнопка Редактировать информацию."""
         return self.find_element(UserPageLocators.EDIT_LINK)
 
-    def input_name(self):
+    def input_first_name(self):
         return self.find_element(UserPageLocators.INPUT_FIRST_NAME)
+
+    def input_last_name(self):
+        return self.find_element(UserPageLocators.INPUT_LAST_NAME)
 
     def input_email(self):
         return self.find_element(UserPageLocators.INPUT_EMAIL)
 
+    def email_display_select(self) -> WebElement:
+        email_display = self.find_select_element(UserPageLocators.EMAIL_DISPLAY)
+        return email_display
+
+    def select_email_display(self, value):
+        self.select_value(self.email_display_select(), value)
+
+    def input_moodlenet(self):
+        return self.find_element(UserPageLocators.INPUT_MOODLENET)
+
     def input_city(self):
         return self.find_element(UserPageLocators.INPUT_CITY)
 
+    def time_zone_select(self) -> WebElement:
+        time_zone = self.find_select_element(UserPageLocators.TIME_ZONE)
+        return time_zone
+
+    def select_time_zone(self, value):
+        self.select_value(self.time_zone_select(), value)
+
+    def add_image(self):
+        return self.find_clickable_element(AddImageLocators.ADD)
+
+    def upload_file(self):
+        return self.find_clickable_element(AddImageLocators.INPUT_FILE)
+
+    def description_image(self):
+        return self.find_clickable_element(AddImageLocators.INPUT_DESCRIPTION)
+
+    def button_upload(self):
+        return self.find_element(AddImageLocators.UPLOAD_BUTTON)
+
+    def click_more_info(self):
+        return self.find_clickable_element(MoreInfoLocators.MORE_INFO_LINK)
+
+    def more_first_name(self):
+        return self.find_element(MoreInfoLocators.MORE_FIRST_NAME)
+
+    def more_last_name(self):
+        return self.find_element(MoreInfoLocators.MORE_LAST_NAME)
+
+    def input_middle_name(self):
+        return self.find_element(MoreInfoLocators.MORE_MIDDLE_NAME)
+
+    def input_alter_name(self):
+        return self.find_element(MoreInfoLocators.ALTER_NAME)
+
+    def click_interests(self):
+        return self.find_element(InterestsLocators.CLICK_INTEREST)
+
+    def interests(self):
+        return self.find_element(InterestsLocators.INPUT_INTEREST)
+
+    def click_optional(self):
+        return self.find_element(OptionalLocators.LINK_OPTIONAL)
+
+    def input_id_number(self):
+        return self.find_element(OptionalLocators.INPUT_NUMBER)
+
+    def input_institution(self):
+        return self.find_element(OptionalLocators.INPUT_ORGANIZATION)
+
+    def input_department(self):
+        return self.find_element(OptionalLocators.INPUT_DEPARTMENT)
+
+    def input_phone1(self):
+        return self.find_element(OptionalLocators.INPUT_PHONE)
+
+    def input_phone2(self):
+        return self.find_element(OptionalLocators.INPUT_MOB_PHONE)
+
+    def input_address(self):
+        return self.find_element(OptionalLocators.INPUT_ADDRESS)
+
     def submit_save_button(self):
-        return self.find_element(UserPageLocators.SAVE_BUTTON)
-
-
+        return self.find_clickable_element(UserPageLocators.SAVE_BUTTON)
 
     def auto_login(self, data: AuthData):
         self.input(self.login_input(), data.login)
@@ -51,19 +125,43 @@ class ProfilePage(BasePage):
         self.click(self.submit_setting_button())
         self.click(self.submit_edit_button())
 
-    def input_data(self, data: UserData):
-        self.input(self.input_name(), data.name)
+    def edit_info(self, data: UserData):
+        self.input(self.input_first_name(), data.first_name)
+        self.input(self.input_last_name(), data.last_name)
         self.input(self.input_email(), data.email)
+        self.select_email_display(data.email_display_mode)
+        self.select_time_zone(data.time_zone)
+        self.input(self.input_moodlenet(), data.moodlenet)
         self.input(self.input_city(), data.city)
+
+    def input_image(self, image: UserImage):
+        self.click(self.add_image())
+        self.input_file(self.upload_file(), image.image)
+        self.click(self.button_upload())
+        self.input(self.description_image(), image.description)
+
+    def more_info(self, data: UserData):
+        self.click(self.click_more_info())
+        self.input(self.more_first_name(), data.first_name)
+        self.input(self.more_last_name(), data.last_name)
+        self.input(self.input_middle_name(), data.middle_name)
+        self.input(self.input_alter_name(), data.first_name)
+
+    def input_interests(self, data: UserData):
+        self.click(self.click_interests())
+        self.input(self.interests(), data.interest)
+
+    def input_optional(self, data: UserData):
+        self.click(self.click_optional())
+        self.input(self.input_id_number(), data.id_number)
+        self.input(self.input_institution(), data.institution)
+        self.input(self.input_department(), data.department)
+        self.input(self.input_phone1(), data.phone)
+        self.input(self.input_phone2(), data.phone)
+        self.input(self.input_address(), data.address)
 
     def save_changes(self):
         self.click(self.submit_save_button())
 
     def save_message(self):
         return self.find_element(UserPageLocators.SAVE_MESSAGE).text
-
-
-
-
-
-
