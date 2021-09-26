@@ -1,0 +1,31 @@
+from selenium.webdriver.common.by import By
+
+
+class CreateCourseLocators:
+
+    CLICK_ADD_COURSE = (By.LINK_TEXT, "Добавить курс")
+    CLICK_EXPAND_ALL = (By.LINK_TEXT,"Развернуть всё")
+    INPUT_FULL_COURSE_NAME = (By.ID, "id_fullname")
+    INPUT_SHORT_COURSE_NAME = (By.ID, "id_shortname")
+    SELECT_END_DAY = (By.ID, "id_enddate_day")
+    SELECT_END_MONTH = (By.ID, "id_enddate_month")
+    SELECT_END_YEAR = (By.ID, "id_enddate_year")
+    SELECT_END_HOUR = (By.ID, "id_enddate_hour")
+    SELECT_END_MINUTE = (By.ID, "id_enddate_minute")
+    INPUT_DESCRIPTION_COURSE = (By.ID, "id_summary_editoreditable")
+    SUBMIT_CHANGE = (By.ID, "id_saveanddisplay")
+    SELECT_COUNT_SECTION = (By.ID, "id_numsections")
+    SELECT_DISPLAYING_HIDDEN_SECTIONS = (By.ID, "id_hiddensections")
+    SELECT_PRESENTATION_COURSE = (By.ID, "id_coursedisplay")
+    SELECT_COURSE_LANGUAGE = (By.ID, "id_lang")
+    SELECT_NUMBER_ADS = (By.ID, "id_newsitems")
+    SELECT_MAX_BYTES = (By.ID, "id_maxbytes")
+    INPUT_MANAGER = (By.ID, "id_role_1")
+    INPUT_TEACHER = (By.ID, "id_role_3")
+    INPUT_STUDENT = (By.ID, "id_role_5")
+    NEW_COURSE_HEADER = (By.CLASS_NAME, "page-header-headings")
+    INPUT_SEARCH_COURSE = (By.NAME, "search")
+    BUTTON_SEARCH_COURSE = (By.CSS_SELECTOR, ".search-icon")
+    DELETE_COURSE_BUTTON = (By.CLASS_NAME, "action-delete")
+    CONFIRM_DELETE_BUTTON = (By.XPATH, "//button[text()='Удалить']")
+    COURSE_DELETE_CONFIRMATION = (By.TAG_NAME, "h2")

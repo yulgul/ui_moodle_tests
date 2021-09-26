@@ -7,7 +7,9 @@ from common.constans import PersonalDataConstants
 
 fake = Faker('Ru-ru')
 
-current_dir = "C:\\Users\\Aigul\\PycharmProjects\\ui_moodle_tests\\pages\\images"
+current_dir = os.path.dirname(__file__)
+path = os.path.join(current_dir, "images")
+filename = random.choice(os.listdir(path))
 
 
 class UserData:
@@ -55,6 +57,6 @@ class UserImage:
         self.description = description
     @staticmethod
     def random():
-        image = random.choice([os.path.join(current_dir, f) for f in os.listdir(current_dir)])
+        image = os.path.join(path, filename)
         description = fake.text()
         return UserImage(image, description)

@@ -4,6 +4,7 @@ class UserPageLocators:
     USER_BUTTON = (By.CLASS_NAME, "userbutton")
     SETTING_BUTTON = (By.ID, "actionmenuaction-5")
     EDIT_LINK = (By.LINK_TEXT, "Редактировать информацию")
+    CLICK_EXPAND_ALL = (By.LINK_TEXT, "Развернуть всё")
     INPUT_FIRST_NAME = (By.ID, "id_firstname")
     INPUT_LAST_NAME = (By.ID, "id_lastname")
     INPUT_EMAIL = (By.ID, "id_email")

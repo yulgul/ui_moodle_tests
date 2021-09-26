@@ -5,7 +5,6 @@ from selenium.webdriver.chrome.options import Options
 
 from webdriver_manager.chrome import ChromeDriverManager
 
-from models.auth import AuthData
 from pages.app import Application
 
 
@@ -43,8 +42,3 @@ def pytest_addoption(parser):
         help="launching browser without gui",
     ),
 
-#@pytest.fixture()
-#def auto_auth(app):
-    #app.open_auth_page()
-    #data = AuthData(login="admi-test", password="TestQa-1")
-    #app.login.auth(data)

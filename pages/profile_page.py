@@ -11,6 +11,10 @@ from selenium.webdriver.remote.webelement import WebElement
 
 class ProfilePage(BasePage):
 
+    def click_expand_all(self):
+        expand_all = self.find_element(UserPageLocators.CLICK_EXPAND_ALL)
+        return self.click(expand_all)
+
     def login_input(self) -> WebElement:
         return self.find_element(LoginPageLocators.LOGIN)
 
@@ -126,6 +130,7 @@ class ProfilePage(BasePage):
         self.click(self.submit_edit_button())
 
     def edit_info(self, data: UserData):
+        self.click_expand_all()
         self.input(self.input_first_name(), data.first_name)
         self.input(self.input_last_name(), data.last_name)
         self.input(self.input_email(), data.email)
@@ -141,18 +146,16 @@ class ProfilePage(BasePage):
         self.input(self.description_image(), image.description)
 
     def more_info(self, data: UserData):
-        self.click(self.click_more_info())
         self.input(self.more_first_name(), data.first_name)
         self.input(self.more_last_name(), data.last_name)
         self.input(self.input_middle_name(), data.middle_name)
         self.input(self.input_alter_name(), data.first_name)
 
     def input_interests(self, data: UserData):
-        self.click(self.click_interests())
         self.input(self.interests(), data.interest)
 
     def input_optional(self, data: UserData):
-        self.click(self.click_optional())
+
         self.input(self.input_id_number(), data.id_number)
         self.input(self.input_institution(), data.institution)
         self.input(self.input_department(), data.department)
