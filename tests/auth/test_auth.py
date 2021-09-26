@@ -43,11 +43,4 @@ class TestAuth:
         app.login.auth(data)
         assert LoginConstant.AUTH_ERROR == app.login.auth_error(), "We are auth"
 
-    def test_auto_auth(self, app, auto_auth):
-        """
-                Steps
-                1. Open main page
-                2. Auth with no valid data
-                3. Check auth result.
-                """
-        app.open_main_page
+

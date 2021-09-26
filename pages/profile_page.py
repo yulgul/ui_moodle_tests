@@ -155,7 +155,6 @@ class ProfilePage(BasePage):
         self.input(self.interests(), data.interest)
 
     def input_optional(self, data: UserData):
-
         self.input(self.input_id_number(), data.id_number)
         self.input(self.input_institution(), data.institution)
         self.input(self.input_department(), data.department)
