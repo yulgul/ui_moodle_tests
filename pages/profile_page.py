@@ -11,10 +11,6 @@ from selenium.webdriver.remote.webelement import WebElement
 
 class ProfilePage(BasePage):
 
-    def click_expand_all(self):
-        expand_all = self.find_element(UserPageLocators.CLICK_EXPAND_ALL)
-        return self.click(expand_all)
-
     def login_input(self) -> WebElement:
         return self.find_element(LoginPageLocators.LOGIN)
 
@@ -32,6 +28,10 @@ class ProfilePage(BasePage):
 
     def submit_edit_button(self):
         return self.find_element(UserPageLocators.EDIT_LINK)
+
+    def click_expand_all(self):
+        expand_all = self.find_element(UserPageLocators.CLICK_EXPAND_ALL)
+        return self.click(expand_all)
 
     def input_first_name(self):
         return self.find_element(UserPageLocators.INPUT_FIRST_NAME)
@@ -74,9 +74,6 @@ class ProfilePage(BasePage):
     def button_upload(self):
         return self.find_element(AddImageLocators.UPLOAD_BUTTON)
 
-    def click_more_info(self):
-        return self.find_clickable_element(MoreInfoLocators.MORE_INFO_LINK)
-
     def more_first_name(self):
         return self.find_element(MoreInfoLocators.MORE_FIRST_NAME)
 
@@ -89,14 +86,8 @@ class ProfilePage(BasePage):
     def input_alter_name(self):
         return self.find_element(MoreInfoLocators.ALTER_NAME)
 
-    def click_interests(self):
-        return self.find_element(InterestsLocators.CLICK_INTEREST)
-
     def interests(self):
         return self.find_element(InterestsLocators.INPUT_INTEREST)
-
-    def click_optional(self):
-        return self.find_element(OptionalLocators.LINK_OPTIONAL)
 
     def input_id_number(self):
         return self.find_element(OptionalLocators.INPUT_NUMBER)
