@@ -169,3 +169,10 @@ class ProfilePage(BasePage):
 
     def save_message(self):
         return self.find_element(UserPageLocators.SAVE_MESSAGE).text
+
+    def is_changed(self):
+        self.find_element(MoreInfoLocators.BODY)
+        element = self.find_elements(MoreInfoLocators.CHANGE)
+        if len(element) > 0:
+            return True
+        return False

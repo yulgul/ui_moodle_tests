@@ -26,6 +26,8 @@ class MoreInfoLocators:
     MORE_LAST_NAME = (By.ID, "id_lastnamephonetic")
     MORE_MIDDLE_NAME = (By.ID, "id_middlename")
     ALTER_NAME = (By.ID, "id_alternatename")
+    BODY = (By.ID, "region-main-box")
+    CHANGE = (By.CLASS_NAME, "alert-success")
 
 class InterestsLocators:
     INPUT_INTEREST = (By.CSS_SELECTOR, "input[placeholder='Введите теги...']")

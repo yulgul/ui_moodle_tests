@@ -179,7 +179,22 @@ class CreateCoursePage(BasePage):
     def message_delete_course(self):
         return self.find_element(CreateCourseLocators.COURSE_DELETE_CONFIRMATION).text
 
+    def is_full_course_name_error(self) -> bool:
+        element = self.find_elements(CreateCourseLocators.FULLNAME_ERROR)
+        if len(element) > 0:
+            return True
+        return False
 
+    def is_short_course_name_error(self) -> bool:
+        element = self.find_elements(CreateCourseLocators.SHORTNAME_ERROR)
+        if len(element) > 0:
+            return True
+        return False
+
+    def is_course_name_error(self):
+        if self.is_short_course_name_error() or self.is_full_course_name_error():
+            return True
+        return False
 
 
 
