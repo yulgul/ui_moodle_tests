@@ -50,4 +50,9 @@ class LoginPage(BasePage):
     def auth_error(self) -> str:
         return self.find_element(LoginPageLocators.LOGIN_ERROR).text
 
-
+    def sign_out(self):
+        if self.is_auth():
+            self.click(self.user_menu())
+            self.click(self.exit())
+        if self.exit_confirm():
+            self.click(self.exit_confirm())

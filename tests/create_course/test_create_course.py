@@ -4,10 +4,7 @@ from models.create_course import CreateCourseData
 
 
 class TestCreateCourse:
-    def test_create_course(self, app):
-        app.open_auth_page()
-        data = AuthData(login="admi-test", password="TestQa-1")
-        app.profile.auto_login(data)
+    def test_create_course(self, app, auth):
         app.open_create_course_page()
         data = CreateCourseData.random()
         app.course.create_course(data)

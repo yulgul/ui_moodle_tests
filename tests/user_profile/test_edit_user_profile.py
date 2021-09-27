@@ -8,10 +8,7 @@ from models.user_data import UserData, UserImage
 
 
 class TestUserProfile:
-    def test_edit_userprofile_valid_data(self, app):
-        app.open_auth_page()
-        data = AuthData(login="admi-test", password="TestQa-1")
-        app.profile.auto_login(data)
+    def test_edit_userprofile_valid_data(self, app, auth):
         app.profile.edit_user()
         data = UserData.random()
         app.profile.edit_info(data)
