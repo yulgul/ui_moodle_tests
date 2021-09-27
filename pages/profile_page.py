@@ -1,4 +1,4 @@
-
+import logging
 
 from locators.user_page_locators import UserPageLocators, AddImageLocators, MoreInfoLocators, InterestsLocators, \
     OptionalLocators
@@ -8,6 +8,7 @@ from pages.base_page import BasePage
 from locators.login_page_locators import LoginPageLocators
 from selenium.webdriver.remote.webelement import WebElement
 
+logger = logging.getLogger("moodle")
 
 class ProfilePage(BasePage):
 
@@ -121,6 +122,16 @@ class ProfilePage(BasePage):
         self.click(self.submit_edit_button())
 
     def edit_info(self, data: UserData):
+        logger.info(
+            f"Editing basic personal data with next values:\n"
+            f"name: {data.first_name}\n"
+            f"lastname: {data.last_name}\n"
+            f"email: {data.email}\n"
+            f"moodle_net_profile: {data.moodlenet}\n"
+            f"city: {data.city}\n"
+            f"timezone: {data.time_zone}\n"
+
+        )
         self.click_expand_all()
         self.input(self.input_first_name(), data.first_name)
         self.input(self.input_last_name(), data.last_name)

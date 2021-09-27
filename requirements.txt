@@ -1,4 +1,3 @@
-
 allure-pytest==2.9.43
 allure-python-commons
 atomicwrites==1.4.0

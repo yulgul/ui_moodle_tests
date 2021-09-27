@@ -9,6 +9,7 @@ from models.auth import AuthData
 from pages.app import Application
 
 
+
 @pytest.fixture(scope="session")
 def app(request):
     base_url = request.config.getoption("--base-url")

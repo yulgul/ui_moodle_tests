@@ -1,10 +1,12 @@
-from selenium.webdriver.common.by import By
+import logging
+
 from selenium.webdriver.remote.webelement import WebElement
 
 from locators.create_course_locators import CreateCourseLocators
 from models.create_course import CreateCourseData
 from pages.base_page import BasePage
 
+logger = logging.getLogger("moodle")
 
 class CreateCoursePage(BasePage):
 
@@ -125,7 +127,9 @@ class CreateCoursePage(BasePage):
     def create_course(self, data: CreateCourseData):
         self.click(self.click_add_course())
         self.click_expand_all()
+        logger.info(f'Full course name is "{data.full_course_name}".')
         self.input_full_course_name(data.full_course_name)
+        logger.info(f'Short course name is "{data.short_course_name}".')
         self.input(self.input_short_course_name(), data.short_course_name)
         self.select_value_end_day(data.end_day)
         self.select_value_end_month(data.end_month)
@@ -142,6 +146,7 @@ class CreateCoursePage(BasePage):
         self.input_manager(data.manager_name)
         self.input_teacher(data.teacher_name)
         self.input_student(data.student_name)
+        logger.info("Submitting changes.")
         self.submit_change()
 
     def new_course_page(self):
