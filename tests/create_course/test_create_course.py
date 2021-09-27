@@ -1,5 +1,4 @@
 from common.constans import DeleteCourseConstants
-from models.auth import AuthData
 from models.create_course import CreateCourseData
 
 

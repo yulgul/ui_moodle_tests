@@ -1,9 +1,6 @@
-import time
-
-
 
 from common.constans import ChangeConstant
-from models.auth import AuthData
+
 from models.user_data import UserData, UserImage
 
 
