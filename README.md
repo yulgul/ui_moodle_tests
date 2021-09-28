@@ -1,7 +1,3 @@
-# ui_moodle_tests
-
-Pytnon selenium ui tests
-testing https://qacoursemoodle.innopolis.university/login/index.php
 [![Build Status](https://app.travis-ci.com/yulgul/ui_moodle_tests.svg?branch=main)](https://app.travis-ci.com/github/yulgul/ui_moodle_tests)
 
 # Тесты для приложения ["Курсы"](https://qacoursemoodle.innopolis.university)
@@ -29,7 +25,7 @@ pip install -r /path/to/requirements.txt
 * пустой логин
 * пустой пароль
 
-__тест-кейсы__: [на форму авторизации](https://docs.google.com/spreadsheets/d/1OQ8zjJmgeb0Bb6UenDapVIFmVbjRmoW0eBtqThQK5xA/edit#gid=0)
+__тест-кейсы__: [на форму авторизации](https://docs.google.com/spreadsheets/d/1_DCJLRXljcAk3P_9b39I80vea56N_3lEJiSLU6kvYk8/edit#gid=0)
 
 __Запуск в файле__: tests/auth/test_auth.py
 
