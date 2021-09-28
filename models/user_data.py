@@ -24,9 +24,9 @@ class UserData:
         self.time_zone = time_zone
         self.middle_name = middle_name
         self.interest = interest
-        self.id_number= id_number
-        self.institution= institution
-        self.department= department
+        self.id_number = id_number
+        self.institution = institution
+        self.department = department
         self.phone = phone
         self.address = address
 
