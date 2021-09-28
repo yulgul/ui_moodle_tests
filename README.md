@@ -1,3 +1,7 @@
+# ui_moodle_tests
+
+Pytnon selenium ui tests
+testing https://qacoursemoodle.innopolis.university/login/index.php
 [![Build Status](https://app.travis-ci.com/yulgul/ui_moodle_tests.svg?branch=main)](https://app.travis-ci.com/github/yulgul/ui_moodle_tests)
 
 # Тесты для приложения ["Курсы"](https://qacoursemoodle.innopolis.university)
@@ -25,7 +29,7 @@ pip install -r /path/to/requirements.txt
 * пустой логин
 * пустой пароль
 
-__тест-кейсы__: [на форму авторизации](https://docs.google.com/spreadsheets/d/1_DCJLRXljcAk3P_9b39I80vea56N_3lEJiSLU6kvYk8/edit#gid=0)
+__тест-кейсы__: [на форму авторизации](https://docs.google.com/spreadsheets/d/1OQ8zjJmgeb0Bb6UenDapVIFmVbjRmoW0eBtqThQK5xA/edit#gid=0)
 
 __Запуск в файле__: tests/auth/test_auth.py
 
@@ -40,6 +44,16 @@ __тест-кейсы__: [на форму заполнения персонал�
 
 __Запуск в файле__: \tests\personal_data\test_edit_user_profile.py
 
+### Тест проверки формы регистрации
+Позитивные проверки:
+* заполнение формы валидными данными и авторизация под новым пользователем 
+
+Негативные проверки обязательных полей:
+* поочередное заполнение обязательных полей формы невалидными данными и проверка невозможности авторизации под новым пользователем
+
+__тест-кейсы__: [на форму регистрации](https://docs.google.com/spreadsheets/d/1OQ8zjJmgeb0Bb6UenDapVIFmVbjRmoW0eBtqThQK5xA/edit#gid=1310841361)
+
+__Запуск в файле__: tests/sign_up/test_sign_up.py
 
 ### Тест проверки возможности создания и удаления курса
 Позитивные проверки:
