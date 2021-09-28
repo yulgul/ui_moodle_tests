@@ -1,7 +1,4 @@
-# ui_moodle_tests
 
-Pytnon selenium ui tests
-testing https://qacoursemoodle.innopolis.university/login/index.php
 [![Build Status](https://app.travis-ci.com/yulgul/ui_moodle_tests.svg?branch=main)](https://app.travis-ci.com/github/yulgul/ui_moodle_tests)
 
 # Тесты для приложения ["Курсы"](https://qacoursemoodle.innopolis.university)
