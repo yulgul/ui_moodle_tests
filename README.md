@@ -25,7 +25,7 @@ pip install -r /path/to/requirements.txt
 * пустой логин
 * пустой пароль
 
-__тест-кейсы__: [на форму авторизации](https://docs.google.com/spreadsheets/d/1OQ8zjJmgeb0Bb6UenDapVIFmVbjRmoW0eBtqThQK5xA/edit#gid=0)
+__тест-кейсы__: [на форму авторизации]()
 
 __Запуск в файле__: tests/auth/test_auth.py
 
@@ -36,7 +36,7 @@ __Запуск в файле__: tests/auth/test_auth.py
 Негативные проверки обязательных полей:
 * поочередное заполнение обязательных полей формы невалидными данными
 
-__тест-кейсы__: [на форму заполнения персональных данных](https://docs.google.com/spreadsheets/d/1OQ8zjJmgeb0Bb6UenDapVIFmVbjRmoW0eBtqThQK5xA/edit#gid=1621977626)
+__тест-кейсы__: [на форму заполнения персональных данных]()
 
 __Запуск в файле__: \tests\personal_data\test_edit_user_profile.py
 
@@ -44,7 +44,7 @@ __Запуск в файле__: \tests\personal_data\test_edit_user_profile.py
 Позитивные проверки:
 * заполнение формы валидными данными создание и удаление созданного курса 
 
-__тест-кейсы__: [на форму создания курса](https://docs.google.com/spreadsheets/d/1OQ8zjJmgeb0Bb6UenDapVIFmVbjRmoW0eBtqThQK5xA/edit#gid=1937322818)
+__тест-кейсы__: [на форму создания курса]()
 
 __Запуск в файле__: tests/create_course/test_create_course_.py
 
