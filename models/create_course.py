@@ -4,17 +4,30 @@ from faker import Faker
 
 from common.constans import CreateCourseConstants
 
-fake = Faker('Ru-ru')
+fake = Faker("Ru-ru")
 
 
 class CreateCourseData:
-    def __init__(self, full_course_name=None, short_course_name=None,
-                 end_day=None, end_month=None, end_year=None,
-                 end_hour=None, end_minute=None, description_course=None,
-                 section_number=None, displaying_hidden_section=None,
-                 presentation_course=None, course_language=None,
-                 number_ads=None, max_bytes=None, manager_name=None,
-                 teacher_name=None, student_name=None):
+    def __init__(
+        self,
+        full_course_name=None,
+        short_course_name=None,
+        end_day=None,
+        end_month=None,
+        end_year=None,
+        end_hour=None,
+        end_minute=None,
+        description_course=None,
+        section_number=None,
+        displaying_hidden_section=None,
+        presentation_course=None,
+        course_language=None,
+        number_ads=None,
+        max_bytes=None,
+        manager_name=None,
+        teacher_name=None,
+        student_name=None,
+    ):
         self.full_course_name = full_course_name
         self.short_course_name = short_course_name
         self.end_day = end_day
@@ -35,7 +48,7 @@ class CreateCourseData:
 
     @staticmethod
     def random():
-        full_course_name = fake.job()+fake.building_number()
+        full_course_name = fake.job() + fake.building_number()
         short_course_name = fake.word()
         end_day = str(random.randint(1, 31))
         end_month = str(random.randint(1, 12))
@@ -60,9 +73,22 @@ class CreateCourseData:
         manager_name = fake.word()
         teacher_name = fake.word()
         student_name = fake.word()
-        return CreateCourseData(full_course_name, short_course_name,
-                                end_day, end_month, end_year, end_hour, end_minute,
-                                description_course, section_number,
-                                displaying_hidden_section, presentation_course, course_language,
-                                number_ads, max_bytes, manager_name,
-                                teacher_name, student_name )
+        return CreateCourseData(
+            full_course_name,
+            short_course_name,
+            end_day,
+            end_month,
+            end_year,
+            end_hour,
+            end_minute,
+            description_course,
+            section_number,
+            displaying_hidden_section,
+            presentation_course,
+            course_language,
+            number_ads,
+            max_bytes,
+            manager_name,
+            teacher_name,
+            student_name,
+        )

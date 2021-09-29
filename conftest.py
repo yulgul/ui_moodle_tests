@@ -13,12 +13,18 @@ from pages.app import Application
 
 logger = logging.getLogger("moodle")
 
+
 @pytest.fixture(scope="session")
 def app(request):
     base_url = request.config.getoption("--base-url")
     chrome_options = Options()
     chrome_options.headless = request.config.getoption("--headless")
-    fixture = Application(webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options), base_url)
+    fixture = Application(
+        webdriver.Chrome(
+            ChromeDriverManager().install(), chrome_options=chrome_options
+        ),
+        base_url,
+    )
     yield fixture
     fixture.quit()
 
@@ -37,7 +43,10 @@ def pytest_addoption(parser):
         help="enter userlogin",
     ),
     parser.addoption(
-        "--password", action="store", default="TestQa-1", help="enter password",
+        "--password",
+        action="store",
+        default="TestQa-1",
+        help="enter password",
     ),
 
     parser.addoption(
@@ -46,6 +55,7 @@ def pytest_addoption(parser):
         default=False,
         help="launching browser without gui",
     ),
+
 
 @pytest.fixture
 def auth(app, request):

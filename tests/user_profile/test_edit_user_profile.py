@@ -25,7 +25,9 @@ class TestUserProfile:
         app.profile.input_interests(data)
         app.profile.input_optional(data)
         app.profile.save_changes()
-        assert ChangeConstant.CHANGE_MESSAGE == app.profile.save_message(), "Изменения не сохранены"
+        assert (
+            ChangeConstant.CHANGE_MESSAGE == app.profile.save_message()
+        ), "Изменения не сохранены"
 
     @pytest.mark.parametrize("field", ["first_name", "last_name", "email"])
     def test_edit_basic_personal_data_without_required_field(self, app, auth, field):
@@ -47,9 +49,4 @@ class TestUserProfile:
         app.profile.more_info(data)
 
         app.profile.save_changes()
-        assert (
-            not app.profile.is_changed()
-        ), "Personal data should not be changed!"
-
-
-
+        assert not app.profile.is_changed(), "Personal data should not be changed!"

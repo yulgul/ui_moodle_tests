@@ -21,7 +21,7 @@ class TestAuth:
         """
         Steps
         1. Open main page
-        2. Auth with no valid data
+        2. Auth with invalid data
         3. Check auth result.
         """
         app.open_auth_page()
@@ -29,12 +29,12 @@ class TestAuth:
         app.login.auth(data)
         assert LoginConstant.AUTH_ERROR == app.login.auth_error(), "We are auth"
 
-    @pytest.mark.parametrize('field', ['login', 'password'])
+    @pytest.mark.parametrize("field", ["login", "password"])
     def test_auth_empty_data(self, app, field):
         """
         Steps
         1. Open main page
-        2. Auth with no valid data
+        2. Auth with empty data
         3. Check auth result.
         """
         app.open_auth_page()
@@ -42,5 +42,3 @@ class TestAuth:
         setattr(data, field, None)
         app.login.auth(data)
         assert LoginConstant.AUTH_ERROR == app.login.auth_error(), "We are auth"
-
-

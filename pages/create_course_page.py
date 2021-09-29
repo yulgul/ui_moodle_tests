@@ -8,8 +8,8 @@ from pages.base_page import BasePage
 
 logger = logging.getLogger("moodle")
 
-class CreateCoursePage(BasePage):
 
+class CreateCoursePage(BasePage):
     def click_add_course(self):
         return self.find_element(CreateCourseLocators.CLICK_ADD_COURSE)
 
@@ -17,11 +17,11 @@ class CreateCoursePage(BasePage):
         expand_all = self.find_element(CreateCourseLocators.CLICK_EXPAND_ALL)
         return self.click(expand_all)
 
-
     def input_full_course_name(self, text):
-        full_course_name = self.find_element(CreateCourseLocators.INPUT_FULL_COURSE_NAME)
+        full_course_name = self.find_element(
+            CreateCourseLocators.INPUT_FULL_COURSE_NAME
+        )
         return self.input(full_course_name, text)
-
 
     def input_short_course_name(self):
         return self.find_element(CreateCourseLocators.INPUT_SHORT_COURSE_NAME)
@@ -62,32 +62,42 @@ class CreateCoursePage(BasePage):
         self.select_value(self.select_end_minute(), value)
 
     def input_description_course(self, text):
-        description_course = self.find_clickable_element(CreateCourseLocators.INPUT_DESCRIPTION_COURSE)
+        description_course = self.find_clickable_element(
+            CreateCourseLocators.INPUT_DESCRIPTION_COURSE
+        )
         return self.input(description_course, text)
 
     def select_count_section(self):
-        count_section = self.find_select_element(CreateCourseLocators.SELECT_COUNT_SECTION)
+        count_section = self.find_select_element(
+            CreateCourseLocators.SELECT_COUNT_SECTION
+        )
         return count_section
 
     def select_value_count_section(self, value):
         self.select_value(self.select_count_section(), value)
 
     def select_displaying_hidden_section(self):
-        count_section = self.find_select_element(CreateCourseLocators.SELECT_DISPLAYING_HIDDEN_SECTIONS)
+        count_section = self.find_select_element(
+            CreateCourseLocators.SELECT_DISPLAYING_HIDDEN_SECTIONS
+        )
         return count_section
 
     def select_value_displaying_hidden_section(self, value):
         self.select_value(self.select_displaying_hidden_section(), value)
 
     def select_presentation_course(self):
-        presentation_course = self.find_select_element(CreateCourseLocators.SELECT_PRESENTATION_COURSE)
+        presentation_course = self.find_select_element(
+            CreateCourseLocators.SELECT_PRESENTATION_COURSE
+        )
         return presentation_course
 
     def select_value_presentation_course(self, value):
         self.select_value(self.select_presentation_course(), value)
 
     def select_course_language(self):
-        course_language = self.find_select_element(CreateCourseLocators.SELECT_COURSE_LANGUAGE)
+        course_language = self.find_select_element(
+            CreateCourseLocators.SELECT_COURSE_LANGUAGE
+        )
         return course_language
 
     def select_value_course_language(self, value):
@@ -123,7 +133,6 @@ class CreateCoursePage(BasePage):
         submit_change = self.find_clickable_element(CreateCourseLocators.SUBMIT_CHANGE)
         return self.click(submit_change)
 
-
     def create_course(self, data: CreateCourseData):
         self.click(self.click_add_course())
         self.click_expand_all()
@@ -153,11 +162,15 @@ class CreateCoursePage(BasePage):
         return self.find_element(CreateCourseLocators.NEW_COURSE_HEADER).text
 
     def input_course_by_full_name(self, text) -> WebElement:
-        course_by_full_name = self.find_element(CreateCourseLocators.INPUT_SEARCH_COURSE)
+        course_by_full_name = self.find_element(
+            CreateCourseLocators.INPUT_SEARCH_COURSE
+        )
         return self.input(course_by_full_name, text)
 
     def click_find_course_by_full_name(self):
-        click_course_by_full_name = self.find_element(CreateCourseLocators.BUTTON_SEARCH_COURSE)
+        click_course_by_full_name = self.find_element(
+            CreateCourseLocators.BUTTON_SEARCH_COURSE
+        )
         return self.click(click_course_by_full_name)
 
     def delete_course(self):
@@ -167,7 +180,6 @@ class CreateCoursePage(BasePage):
     def confirm_delete(self) -> WebElement:
         confirm_delete = self.find_element(CreateCourseLocators.CONFIRM_DELETE_BUTTON)
         return self.click(confirm_delete)
-
 
     def delete_creation_course(self, data: CreateCourseData):
         self.app.open_manager_course_page()
@@ -195,9 +207,3 @@ class CreateCoursePage(BasePage):
         if self.is_short_course_name_error() or self.is_full_course_name_error():
             return True
         return False
-
-
-
-
-
-

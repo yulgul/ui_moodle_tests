@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class UserPageLocators:
     USER_BUTTON = (By.CLASS_NAME, "userbutton")
     SETTING_BUTTON = (By.ID, "actionmenuaction-5")
@@ -15,11 +16,13 @@ class UserPageLocators:
     INPUT_MOODLENET = (By.ID, "id_moodlenetprofile")
     TIME_ZONE = (By.ID, "id_timezone")
 
+
 class AddImageLocators:
     ADD = (By.CLASS_NAME, "fp-btn-add")
     INPUT_FILE = (By.NAME, "repo_upload_file")
     UPLOAD_BUTTON = (By.CLASS_NAME, "fp-upload-btn")
     INPUT_DESCRIPTION = (By.ID, "id_imagealt")
+
 
 class MoreInfoLocators:
     MORE_FIRST_NAME = (By.ID, "id_firstnamephonetic")
@@ -29,8 +32,10 @@ class MoreInfoLocators:
     BODY = (By.ID, "region-main-box")
     CHANGE = (By.CLASS_NAME, "alert-success")
 
+
 class InterestsLocators:
     INPUT_INTEREST = (By.CSS_SELECTOR, "input[placeholder='Введите теги...']")
+
 
 class OptionalLocators:
     INPUT_NUMBER = (By.ID, "id_idnumber")

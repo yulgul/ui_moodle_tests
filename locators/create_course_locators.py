@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 class CreateCourseLocators:
 
     CLICK_ADD_COURSE = (By.LINK_TEXT, "Добавить курс")
-    CLICK_EXPAND_ALL = (By.LINK_TEXT,"Развернуть всё")
+    CLICK_EXPAND_ALL = (By.LINK_TEXT, "Развернуть всё")
     INPUT_FULL_COURSE_NAME = (By.ID, "id_fullname")
     INPUT_SHORT_COURSE_NAME = (By.ID, "id_shortname")
     SELECT_END_DAY = (By.ID, "id_enddate_day")

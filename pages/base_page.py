@@ -1,6 +1,4 @@
-
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -17,7 +15,6 @@ class BasePage:
 
     def find_elements(self, locator):
         return self.app.driver.find_elements(*locator)
-
 
     def click(self, element):
         element.click()
@@ -44,10 +41,4 @@ class BasePage:
         return element
 
     def input_file(self, element, image):
-        element.clear()
-        if image:
-            element.send_keys(image)
-
-
-
-
+        element.send_keys(image)

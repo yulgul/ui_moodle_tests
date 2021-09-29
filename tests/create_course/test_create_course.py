@@ -31,11 +31,12 @@ class TestCreateCourse:
         16. Click delete button next to the new course name.
         17. Confirm deletion by clicking «Удалить».
         18. Check for text "{the new course name} был полностью удален".
-                """
+        """
         app.open_create_course_page()
         data = CreateCourseData.random()
         app.course.create_course(data)
-        assert (app.course.new_course_page() == data.full_course_name
+        assert (
+            app.course.new_course_page() == data.full_course_name
         ), "The course was not created!"
         app.course.delete_creation_course(data)
         message = DeleteCourseConstants.DeleteCourse + data.short_course_name
@@ -43,9 +44,14 @@ class TestCreateCourse:
 
     @pytest.mark.parametrize(
         "full_course_name, short_course_name",
-        [[CreateCourseData.random().full_course_name, None], [None, CreateCourseData.random().short_course_name]],
+        [
+            [CreateCourseData.random().full_course_name, None],
+            [None, CreateCourseData.random().short_course_name],
+        ],
     )
-    def test_invalid_course_creation(self, app, auth, full_course_name, short_course_name):
+    def test_invalid_course_creation(
+        self, app, auth, full_course_name, short_course_name
+    ):
         """
         Steps
         1. Authorize under admin.
@@ -61,6 +67,5 @@ class TestCreateCourse:
         setattr(course_info, "short_course_name", short_course_name)
         app.course.create_course(course_info)
         assert (
-                app.course.is_course_name_error() is True
+            app.course.is_course_name_error() is True
         ), "The course was created without required field!!"
-

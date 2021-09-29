@@ -22,6 +22,7 @@ class PersonalDataConstants:
         "UTC",
     )
 
+
 class CreateCourseConstants:
     SECTION_NUMBER = 52
     COURSE_LANGUAGE = "ru"
@@ -40,6 +41,7 @@ class CreateCourseConstants:
         51200,
         10240,
     ]
+
 
 class DeleteCourseConstants:
     DeleteCourse = "Удаление "

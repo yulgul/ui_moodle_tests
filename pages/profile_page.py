@@ -1,7 +1,12 @@
 import logging
 
-from locators.user_page_locators import UserPageLocators, AddImageLocators, MoreInfoLocators, InterestsLocators, \
-    OptionalLocators
+from locators.user_page_locators import (
+    UserPageLocators,
+    AddImageLocators,
+    MoreInfoLocators,
+    InterestsLocators,
+    OptionalLocators,
+)
 from models.auth import AuthData
 from models.user_data import UserData, UserImage
 from pages.base_page import BasePage
@@ -10,8 +15,8 @@ from selenium.webdriver.remote.webelement import WebElement
 
 logger = logging.getLogger("moodle")
 
-class ProfilePage(BasePage):
 
+class ProfilePage(BasePage):
     def login_input(self) -> WebElement:
         return self.find_element(LoginPageLocators.LOGIN)
 
@@ -130,7 +135,6 @@ class ProfilePage(BasePage):
             f"moodle_net_profile: {data.moodlenet}\n"
             f"city: {data.city}\n"
             f"timezone: {data.time_zone}\n"
-
         )
         self.click_expand_all()
         self.input(self.input_first_name(), data.first_name)

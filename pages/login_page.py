@@ -7,8 +7,8 @@ from selenium.webdriver.remote.webelement import WebElement
 
 logger = logging.getLogger("moodle")
 
-class LoginPage(BasePage):
 
+class LoginPage(BasePage):
     def is_auth(self):
         self.find_element(LoginPageLocators.FORM)
         element = self.find_elements(LoginPageLocators.USER_BUTTON)
@@ -41,8 +41,8 @@ class LoginPage(BasePage):
         return self.find_element(LoginPageLocators.EXIT_CONFIRM)
 
     def auth(self, data: AuthData):
-        logger.info(f'User email is {data.login}')
-        logger.info(f'User password is {data.password}')
+        logger.info(f"User email is {data.login}")
+        logger.info(f"User password is {data.password}")
         if self.is_auth():
             self.click(self.user_menu())
             self.click(self.exit())
@@ -51,7 +51,6 @@ class LoginPage(BasePage):
         self.input(self.login_input(), data.login)
         self.input(self.password_input(), data.password)
         self.click(self.submit_button())
-
 
     def auth_error(self) -> str:
         return self.find_element(LoginPageLocators.LOGIN_ERROR).text
