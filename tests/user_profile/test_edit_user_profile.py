@@ -47,6 +47,5 @@ class TestUserProfile:
         image = UserImage.random()
         app.profile.input_image(image)
         app.profile.more_info(data)
-
         app.profile.save_changes()
         assert not app.profile.is_changed(), "Personal data should not be changed!"
