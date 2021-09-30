@@ -8,13 +8,13 @@
 ***
 1. Создать отдельный репозиторий в github, либо в какой-то другой системе контроля версий
 2. Скопировать адрес удаленного репозитория
-3. В терминале локального компьютера запустить команду ```git clone https://github.com/yulgul/ui_moodle_tests.git```
+3. В терминале локального компьютера запустить команду <br> ```git clone https://github.com/yulgul/ui_moodle_tests.git```
 4. После завершения клонирования открыть файл в PyCharm
 5. В настройках PyCharm создать собственное виртуальное окружение для проекта для этого: File → Settings. Перейти в Project: project_name → Project Interpreter.Через шестиренку добавить окружение
 6. Через терминал PyCharm-а установить пакеты:
-<br>```pip install pytest ```<br>
-<br>```pip install selenium```<br>
-<br>```pip install webdriver-manager```<br>
+<br>```pip install pytest ```
+<br>```pip install selenium```
+<br>```pip install webdriver-manager```
 
 ## Описание проекта
 ***
