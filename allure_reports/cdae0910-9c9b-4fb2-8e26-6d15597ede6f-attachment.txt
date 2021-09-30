@@ -1,5 +1,0 @@
-2021-09-29 19:11:15 [32mINFO[0m User email is admi-test
-2021-09-29 19:11:15 [32mINFO[0m User password is TestQa-1
-2021-09-29 19:11:22 [32mINFO[0m Full course name is "Специалист по стрижке овец177".
-2021-09-29 19:11:22 [32mINFO[0m Short course name is "полоска".
-2021-09-29 19:11:26 [32mINFO[0m Submitting changes.

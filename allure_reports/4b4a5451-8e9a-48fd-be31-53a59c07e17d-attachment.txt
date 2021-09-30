@@ -1,9 +1,0 @@
-2021-09-27 23:02:29 [32mINFO[0m User email is admi-test
-2021-09-27 23:02:29 [32mINFO[0m User password is TestQa-1
-2021-09-27 23:02:34 [32mINFO[0m Editing basic personal data with next values:
-name: Эраст
-lastname: 
-email: jakovlevatatjana@kdv.net
-moodle_net_profile: http://www.ip.info/
-city: с. Южно-Курильск
-timezone: Asia/Dubai

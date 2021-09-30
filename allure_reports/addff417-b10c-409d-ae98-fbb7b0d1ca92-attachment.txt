@@ -1,2 +1,0 @@
-2021-09-27 23:00:58 [32mINFO[0m User email is johnking@yahoo.com
-2021-09-27 23:00:58 [32mINFO[0m User password is None

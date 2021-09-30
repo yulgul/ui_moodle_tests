@@ -1,9 +1,0 @@
-2021-09-27 23:01:58 [32mINFO[0m User email is admi-test
-2021-09-27 23:01:58 [32mINFO[0m User password is TestQa-1
-2021-09-27 23:02:04 [32mINFO[0m Editing basic personal data with next values:
-name: Эмиль
-lastname: Лаврентьева
-email: rozhkovazhanna@oao.net
-moodle_net_profile: https://rao.net/
-city: с. Асбест
-timezone: Europe/Moscow

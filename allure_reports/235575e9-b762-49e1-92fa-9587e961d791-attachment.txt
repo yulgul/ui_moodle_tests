@@ -1,9 +1,0 @@
-2021-09-29 19:12:22 [32mINFO[0m User email is admi-test
-2021-09-29 19:12:22 [32mINFO[0m User password is TestQa-1
-2021-09-29 19:12:28 [32mINFO[0m Editing basic personal data with next values:
-name: Панфил
-lastname: Вишнякова
-email: konovalovaevfrosinija@gmail.com
-moodle_net_profile: https://ooo.info/
-city: г. Архангельск
-timezone: Asia/Dubai

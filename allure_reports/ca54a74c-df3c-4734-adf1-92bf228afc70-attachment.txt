@@ -1,6 +1,0 @@
-
-
-====== WebDriver manager ======
-Current google-chrome version is 94.0.4606
-Get LATEST driver version for 94.0.4606
-Driver [C:\Users\Aigul\.wdm\drivers\chromedriver\win32\94.0.4606.61\chromedriver.exe] found in cache

@@ -1,2 +1,0 @@
-2021-09-27 23:00:57 [32mINFO[0m User email is None
-2021-09-27 23:00:57 [32mINFO[0m User password is 5*ba4UFu$!

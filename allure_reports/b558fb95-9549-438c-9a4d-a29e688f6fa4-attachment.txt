@@ -1,9 +1,0 @@
-2021-09-27 23:02:16 [32mINFO[0m User email is admi-test
-2021-09-27 23:02:16 [32mINFO[0m User password is TestQa-1
-2021-09-27 23:02:22 [32mINFO[0m Editing basic personal data with next values:
-name: 
-lastname: Родионова
-email: panfil1977@rao.net
-moodle_net_profile: https://ao.net/
-city: п. Губкин
-timezone: Africa/Tunis

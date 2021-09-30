@@ -1,2 +1,0 @@
-2021-09-29 19:11:14 [32mINFO[0m User email is rking@kim.com
-2021-09-29 19:11:14 [32mINFO[0m User password is None
