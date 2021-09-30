@@ -1,0 +1,9 @@
+2021-09-29 19:12:52 [32mINFO[0m User email is admi-test
+2021-09-29 19:12:52 [32mINFO[0m User password is TestQa-1
+2021-09-29 19:12:57 [32mINFO[0m Editing basic personal data with next values:
+name: Октябрина
+lastname: 
+email: shestakovaraisa@npo.net
+moodle_net_profile: http://www.ip.com/
+city: к. Орехово-Зуево
+timezone: Europe/Moscow

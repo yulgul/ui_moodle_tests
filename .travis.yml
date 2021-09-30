@@ -13,3 +13,4 @@ install:
 script:
   - pre-commit run --all-files
   - pytest --headless
+  - allure serve allure_reports

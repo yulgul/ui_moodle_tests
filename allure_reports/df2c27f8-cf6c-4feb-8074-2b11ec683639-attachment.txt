@@ -1,0 +1,2 @@
+2021-09-29 19:11:13 [32mINFO[0m User email is None
+2021-09-29 19:11:13 [32mINFO[0m User password is p7CJyB&j%i

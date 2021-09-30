@@ -1,0 +1,5 @@
+2021-09-27 23:01:36 [32mINFO[0m User email is admi-test
+2021-09-27 23:01:36 [32mINFO[0m User password is TestQa-1
+2021-09-27 23:01:42 [32mINFO[0m Full course name is "Кинолог620".
+2021-09-27 23:01:43 [32mINFO[0m Short course name is "None".
+2021-09-27 23:01:46 [32mINFO[0m Submitting changes.

@@ -1,0 +1,8 @@
+2021-09-27 23:00:45 [32mINFO[0m 
+
+2021-09-27 23:00:45 [32mINFO[0m ====== WebDriver manager ======
+2021-09-27 23:00:46 [32mINFO[0m Current google-chrome version is 94.0.4606
+2021-09-27 23:00:46 [32mINFO[0m Get LATEST driver version for 94.0.4606
+2021-09-27 23:00:46 [32mINFO[0m Driver [C:\Users\Aigul\.wdm\drivers\chromedriver\win32\94.0.4606.61\chromedriver.exe] found in cache
+2021-09-27 23:00:53 [32mINFO[0m User email is admi-test
+2021-09-27 23:00:53 [32mINFO[0m User password is TestQa

@@ -1,0 +1,5 @@
+2021-09-27 23:01:47 [32mINFO[0m User email is admi-test
+2021-09-27 23:01:47 [32mINFO[0m User password is TestQa-1
+2021-09-27 23:01:53 [32mINFO[0m Full course name is "None".
+2021-09-27 23:01:53 [32mINFO[0m Short course name is "одиннадцать".
+2021-09-27 23:01:57 [32mINFO[0m Submitting changes.

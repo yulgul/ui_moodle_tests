@@ -1,0 +1,10 @@
+2021-09-29 19:10:59 [32mINFO[0m 
+
+2021-09-29 19:10:59 [32mINFO[0m ====== WebDriver manager ======
+2021-09-29 19:10:59 [32mINFO[0m Current google-chrome version is 94.0.4606
+2021-09-29 19:10:59 [32mINFO[0m Get LATEST driver version for 94.0.4606
+2021-09-29 19:11:00 [32mINFO[0m Get LATEST driver version for 94.0.4606
+2021-09-29 19:11:00 [32mINFO[0m Trying to download new driver from https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_win32.zip
+2021-09-29 19:11:01 [32mINFO[0m Driver has been saved in cache [C:\Users\Aigul\.wdm\drivers\chromedriver\win32\94.0.4606.61]
+2021-09-29 19:11:07 [32mINFO[0m User email is admi-test
+2021-09-29 19:11:07 [32mINFO[0m User password is TestQa-1
